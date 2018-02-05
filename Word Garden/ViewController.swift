@@ -10,16 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userGuestLabel: UILabel!
+    @IBOutlet weak var guessedLetterField: UITextField!
+    @IBOutlet weak var guessLetterButton: UIButton!
+    @IBOutlet weak var guessCountLabel: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var flowerImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        guessLetterButton.isEnabled = false
+        playAgainButton.isHidden = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateUIAfterGuess(){
+        guessedLetterField.resignFirstResponder()
+        guessedLetterField.text = ""
     }
-
+    
+    @IBAction func guessedLetterFieldChanged(_ sender: UITextField) {
+        if let letterGuessed = guessedLetterField.text?.last {
+            guessedLetterField.text = "\(letterGuessed)"
+        }
+        else{
+            //disable the button if i dont have a single character in the guessedLetterField
+            guessLetterButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func doneKeyPressed(_ sender: UITextField) {
+       updateUIAfterGuess()
+    }
+    
+    @IBAction func guessButtonPressed(_ sender: UIButton) {
+        updateUIAfterGuess()
+    }
+    
+    @IBAction func playAgainButtonPressed(_ sender: UIButton) {
+    }
+    
 
 }
 
