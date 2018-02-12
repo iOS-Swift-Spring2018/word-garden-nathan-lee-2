@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2h-SX-fZ8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2h-SX-fZ8">
                                 <rect key="frame" x="16" y="116" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,6 +100,7 @@
                         <outlet property="guessedLetterField" destination="5dN-yC-2jk" id="jrx-6G-1k2"/>
                         <outlet property="playAgain" destination="rIJ-U1-sRe" id="5en-tP-0YF"/>
                         <outlet property="playAgainButton" destination="rIJ-U1-sRe" id="D66-yo-5Fk"/>
+                        <outlet property="userGuessLabel" destination="Q2h-SX-fZ8" id="G8U-0w-4ts"/>
                         <outlet property="userGuestLabel" destination="Q2h-SX-fZ8" id="N3D-bp-ujM"/>
                     </connections>
                 </viewController>
